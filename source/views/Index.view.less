@@ -15,11 +15,6 @@
     user-select: none;
 }
 
-@font-face {
-    font-family: comfortaa;
-    src: url("../assets/fonts/comfortaa.ttf") format("truetype");
-}
-
 :root {
     background-color: #111;
 
@@ -27,11 +22,11 @@
     font-size: 12px;
 }
 
-@import "../../node_modules/font-awesome/less/font-awesome.less";
-@import "../../node_modules/font-awesome/less/mixins.less";
+// // Microns is currently broken, pending pull request.
+// // https://github.com/stephenhutchings/microns/pull/4
+// @import "../../node_modules/microns/fonts/microns.css";
 
-.fa, .fas, .far {
-    font-style: normal;
-    font-weight: normal;
-    font-family: FontAwesome;
+@font-face {
+    font-family: comfortaa;
+    src: url("../assets/fonts/comfortaa.ttf") format("truetype");
 }

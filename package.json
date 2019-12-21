@@ -24,13 +24,12 @@
     "npm": ">=5"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "keyb": "^1.2.0",
     "local-storage-json": "^1.0.0",
     "lodash.clonedeep": "^4.5.0",
+    "microns": "^1.0.5",
     "poin": "^1.0.4",
     "preact": "^10.1.1",
-    "seedrandom": "^3.0.5",
     "shortid": "^2.2.15",
     "statgrab": "^1.2.1",
     "yaafloop": "^1.2.0"
