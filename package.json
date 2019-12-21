@@ -58,13 +58,13 @@
       "target": [
         "dmg"
       ],
-      "icon": "source/images/icons/logo-512x512.png"
+      "icon": "source/assets/images/icons/logo-512x512.png"
     },
     "win": {
       "target": [
         "zip"
       ],
-      "icon": "source/images/icons/logo-256x256.png"
+      "icon": "source/assets/images/icons/logo-256x256.png"
     }
   }
 }

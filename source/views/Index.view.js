@@ -1,7 +1,7 @@
 import * as Preact from "preact"
 import index from "index"
 
-import "views/Mount.view.less"
+import "views/Index.view.less"
 import Frame from "views/components/Frame.view.js"
 
 import GameScreen from "views/screens/GameScreen.view.js"
