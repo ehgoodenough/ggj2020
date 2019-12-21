@@ -1,7 +1,7 @@
 {
   "name": "ggj2020",
   "description": "A game for Global Game Jam 2020.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "main": "main.js",
   "contributors": [
@@ -15,9 +15,9 @@
   "scripts": {
     "build": "codeglue --stage=production",
     "start": "codeglue --stage=development --mode=server",
+    "deploy": "gh-pages --dist builds/web --dest v0.0.0 --add --message 'Publishing v0.0.0'",
     "electron:start": "electron . --stage=development",
-    "electron:build": "electron-builder build",
-    "deploy": "gh-pages --dist builds/web"
+    "electron:build": "electron-builder build"
   },
   "engines": {
     "node": ">=8",
