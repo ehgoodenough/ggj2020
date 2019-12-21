@@ -14,7 +14,7 @@ export default class Link {
     get onClick() {
         return (event) => {
             if(this.props.screen != undefined) {
-                index.screen = this.props.screen
+                index.navigation = {"screen": this.props.screen}
             }
             if(this.props.onClick != undefined
             && this.props.onClick instanceof Function) {

@@ -17,6 +17,7 @@ export default class TitleScreen {
                     <div class="Links">
                         <Link screen="GameScreen" onClick={this.onClickPlay}>Play</Link>
                         <Link screen="OptionsScreen">Options</Link>
+                        <Link screen="CreditsScreen">Credits</Link>
                     </div>
                 </section>
                 <section class="HeroSection">

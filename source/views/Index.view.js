@@ -7,7 +7,7 @@ import Frame from "views/components/Frame.view.js"
 import GameScreen from "views/screens/GameScreen.view.js"
 import TitleScreen from "views/screens/TitleScreen.view.js"
 import OptionsScreen from "views/screens/OptionsScreen.view.js"
-import GameOverScreen from "views/screens/GameOverScreen.view.js"
+import CreditsScreen from "views/screens/CreditsScreen.view.js"
 
 export default class Mount {
     render() {
@@ -23,29 +23,29 @@ export default class Mount {
         )
     }
     get title() {
-        if(index.screen == "OptionsScreen") {
+        if(index.navigation.screen == "OptionsScreen") {
             return index.title + " - Options"
         }
-        if(index.screen == "GameOverScreen") {
-            return index.title + " - Game Over"
+        if(index.navigation.screen == "CreditsScreen") {
+            return index.title + " - Credits"
         }
         return index.title
     }
     get screen() {
-        if(index.screen == "TitleScreen") {
+        if(index.navigation.screen == "TitleScreen") {
             return <TitleScreen/>
         }
-        if(index.screen == "GameScreen") {
+        if(index.navigation.screen == "GameScreen") {
             return <GameScreen/>
         }
-        if(index.screen == "OptionsScreen") {
+        if(index.navigation.screen == "OptionsScreen") {
             return <OptionsScreen/>
         }
-        if(index.screen == "GameOverScreen") {
-            return <GameOverScreen/>
+        if(index.navigation.screen == "CreditsScreen") {
+            return <CreditsScreen/>
         }
         if(__STAGE__ == "DEVELOPMENT") {
-            throw new Error("index.screen is not recognized.")
+            throw new Error("index.navigation.screen is not recognized.")
         }
     }
 }
