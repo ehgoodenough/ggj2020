@@ -15,15 +15,26 @@ export default class Index {
         //     this.screen = "GameScreen"
         //     this.startGame()
         // }
+
+        this.demogame = new Game({
+            "player": {"mode": "demo"}
+        })
     }
     update(delta) {
         this.time += delta.s
 
-        if(this.game != undefined) {
-            this.game.update(delta)
+        if(this.screen == "GameScreen") {
+            if(this.game != undefined) {
+                this.game.update(delta)
+            }
+        }
+        if(this.screen == "TitleScreen") {
+            if(this.demogame != undefined) {
+                this.demogame.update(delta)
+            }
         }
     }
     startGame() {
-        this.game = new Game()
+        this.game = new Game(this.rawgame)
     }
 }

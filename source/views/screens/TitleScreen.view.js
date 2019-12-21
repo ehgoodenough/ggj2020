@@ -2,6 +2,7 @@ import * as Preact from "preact"
 import index from "index"
 
 import "views/screens/TitleScreen.view.less"
+import Game from "views/game/Game.view.js"
 import Link from "views/components/Link.view.js"
 
 export default class TitleScreen {
@@ -19,6 +20,7 @@ export default class TitleScreen {
                     </div>
                 </section>
                 <section class="HeroSection">
+                    <Game game={index.demogame}/>
                 </section>
             </div>
         )

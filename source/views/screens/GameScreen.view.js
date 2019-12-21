@@ -2,13 +2,14 @@ import * as Preact from "preact"
 import index from "index"
 
 import "views/screens/GameScreen.view.less"
+import Game from "views/game/Game.view.js"
 import Link from "views/components/Link.view.js"
 
 export default class GameScreen {
     render() {
         return (
             <div class="GameScreen" onClick={this.onClick}>
-                Game!!!
+                <Game game={index.game}/>
                 <PauseMenu/>
             </div>
         )
