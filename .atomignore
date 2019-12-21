@@ -1,2 +1,5 @@
-# Dependencies
+# Dependency Management Artifacts
 package-lock.json
+
+# Version Control Artifacts
+.gitkeep

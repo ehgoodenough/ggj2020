@@ -1,0 +1,34 @@
+.aspect-ratio(@width, @height) {
+    .Frame {
+        top: 0em;
+        left: 0em;
+        right: 0em;
+        bottom: 0em;
+        margin: auto;
+        position: fixed;
+        overflow: hidden;
+
+        color: #FFF;
+        background-color: #222;
+    }
+
+    @media(min-aspect-ratio: @width ~"/" @height) {
+        font-size: ((@width / @height)* 100vh) / @width;
+        .Frame {
+            width: (@width / @height) * 100vh;
+            height: 100vh;
+        }
+    }
+
+    @media(max-aspect-ratio:@width ~"/" @height) {
+        font-size: ((@height / @width) * 100.5vw) / @height;
+        .Frame {
+            height: (@height / @width) * 100vw;
+            width: 100vw;
+        }
+    }
+}
+
+:root {
+    .aspect-ratio(16, 9);
+}

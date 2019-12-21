@@ -1,0 +1,70 @@
+{
+  "name": "ggj2020",
+  "description": "A game for Global Game Jam 2020.",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "contributors": [
+    "Andrew McPherson <@ehgoodenough>",
+    "Your Name Here <@youraliashere>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ehgoodenough/ggj2020"
+  },
+  "scripts": {
+    "build": "codeglue --stage=production",
+    "start": "codeglue --stage=development --mode=server",
+    "electron:start": "electron . --stage=development",
+    "electron:build": "electron-builder build",
+    "deploy": "gh-pages --dist builds/web"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "keyb": "^1.2.0",
+    "local-storage-json": "^1.0.0",
+    "lodash.clonedeep": "^4.5.0",
+    "poin": "^1.0.4",
+    "preact": "^10.1.1",
+    "seedrandom": "^3.0.5",
+    "shortid": "^2.2.15",
+    "statgrab": "^1.2.1",
+    "yaafloop": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "codeglue": "^1.8.0",
+    "electron": "^7.1.6",
+    "electron-builder": "^22.1.0",
+    "gh-pages": "^2.1.1"
+  },
+  "build": {
+    "appId": "ggj2020",
+    "asar": true,
+    "files": [
+      "builds/web/**/*",
+      "package.json",
+      "main.js"
+    ],
+    "directories": {
+      "output": "builds"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "source/images/icons/logo-512x512.png"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "icon": "source/images/icons/logo-256x256.png"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+* {
+    cursor: default;
+    box-sizing: border-box;
+
+    margin: 0em;
+    padding: 0em;
+
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@font-face {
+    font-family: comfortaa;
+    src: url("../assets/fonts/comfortaa.ttf") format("truetype");
+}
+
+:root {
+    background-color: #111;
+
+    font-family: comfortaa;
+    font-size: 12px;
+}
+
+@import "../../node_modules/font-awesome/less/font-awesome.less";
+@import "../../node_modules/font-awesome/less/mixins.less";
+
+.fa, .fas, .far {
+    font-style: normal;
+    font-weight: normal;
+    font-family: FontAwesome;
+}

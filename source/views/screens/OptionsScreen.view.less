@@ -1,0 +1,74 @@
+@import "../Variables.view.less";
+
+.OptionsScreen {
+    width: 8em;
+    margin: auto;
+    padding: @small-gutter;
+
+    h1 {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .Link {
+        width: 7em;
+        margin: auto;
+
+        font-size: 0.5em;
+        padding: @small-gutter;
+
+        text-align: center;
+        background-color: @yellow;
+        border-radius: @roundness;
+    }
+
+    .Option {
+        margin: @small-gutter 0em;
+        display: flex;
+
+        label {
+            width: 12em;
+            margin-right: @small-gutter;
+            font-size: 0.5em;
+            text-align: right;
+        }
+    }
+
+    input[type=range] {
+        width: 100%;
+        height: 1em;
+
+        font: inherit;
+        font-size: 0.5em;
+
+        outline: none;
+        cursor: pointer;
+
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: @white;
+
+        opacity: 0.75;
+        transition-duration: 0.25s;
+        transition-property: opacity;
+        &:hover {
+            opacity: 1;
+        }
+
+        &::-webkit-slider-thumb {
+            width: 1em;
+            height: 1em;
+
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: @yellow;
+        }
+
+        &::-moz-range-thumb {
+            width: 1em;
+            height: 1em;
+
+            background-color: @yellow;
+        }
+    }
+}
