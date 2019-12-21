@@ -6,15 +6,17 @@ export default class Index {
     constructor(index) {
         this.title = index.title
         this.subtitle = index.subtitle
+        this.credits = index.credits
 
         this.navigation = {"screen": INITIAL_SCREEN}
 
         this.time = 0 // in seconds
 
-        // if(__STAGE__ == "DEVELOPMENT") {
-        //     this.screen = "GameScreen"
-        //     this.startGame()
-        // }
+        if(__STAGE__ == "DEVELOPMENT") {
+            // this.navigation = {"screen": "GameScreen"}
+            // this.startGame()
+            this.navigation = {"screen": "CreditsScreen"}
+        }
 
         this.demogame = new Game({
             "player": {"mode": "demo"}

@@ -7,7 +7,23 @@ export default class CreditsScreen {
     render() {
         return (
             <div class="CreditsScreen" onClick={this.onClick}>
-                Congrats! You win!
+                <h1>{index.title}</h1>
+                <div class="CreditsList">
+                    <h2>from the minds of:</h2>
+                    {index.credits.contributors.map((credit) => (
+                        <div class="Credit">
+                            {credit.name} - <i>{credit.alias}</i>
+                        </div>
+                    ))}
+                </div>
+                <div class="CreditsList">
+                    <h2>our biggest thanks to:</h2>
+                    {index.credits.thanks.map((credit) => (
+                        <div class="Credit">
+                            {credit.name} - <i>{credit.alias}</i>
+                        </div>
+                    ))}
+                </div>
             </div>
         )
     }

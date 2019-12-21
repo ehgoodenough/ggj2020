@@ -1,4 +1,13 @@
 {
     "title": "GGJ 2020",
-    "subtitle": "A game for Global Game Jam."
+    "subtitle": "A game for Global Game Jam.",
+    "credits": {
+        "contributors": [
+            {"name": "Andrew McPherson", "alias": "@ehgoodenough"},
+            {"name": "Your Name Here", "alias": "@youraliashere"}
+        ],
+        "thanks": [
+            {"name": "Fiona The Cat", "alias": "@iamfionathecat"}
+        ]
+    }
 }
