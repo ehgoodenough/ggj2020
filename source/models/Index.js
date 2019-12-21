@@ -13,9 +13,8 @@ export default class Index {
         this.time = 0 // in seconds
 
         if(__STAGE__ == "DEVELOPMENT") {
-            // this.navigation = {"screen": "GameScreen"}
-            // this.startGame()
-            this.navigation = {"screen": "CreditsScreen"}
+            this.navigation = {"screen": "GameScreen"}
+            this.startGame()
         }
 
         this.demogame = new Game({

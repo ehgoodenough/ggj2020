@@ -1,4 +1,4 @@
-import Keyb from "keyb"
+import input from "utility/input.js"
 
 const FRAME_WIDTH = 16
 const FRAME_HEIGHT = 9
@@ -9,27 +9,23 @@ export default class Player {
 
         this.mode = player.mode || "play"
 
-        this.position = player.position || {"x": 0, "y": 0}
+        this.position = player.position || {"x": FRAME_WIDTH / 2, "y": FRAME_HEIGHT / 2}
         this.velocity = player.velocity || {"x": 0, "y": 0}
         this.direction = player.direction || {"x": +1, "y": +1}
         this.speed = 0.1
     }
     update(delta) {
         if(this.mode == "play") {
-            if(Keyb.isPressed("W")
-            || Keyb.isPressed("<up>")) {
+            if(input.isPressed("north")) {
                 this.velocity.y = -this.speed
             }
-            if(Keyb.isPressed("S")
-            || Keyb.isPressed("<down>")) {
+            if(input.isPressed("south")) {
                 this.velocity.y = +this.speed
             }
-            if(Keyb.isPressed("A")
-            || Keyb.isPressed("<left>")) {
+            if(input.isPressed("west")) {
                 this.velocity.x = -this.speed
             }
-            if(Keyb.isPressed("D")
-            || Keyb.isPressed("<right>")) {
+            if(input.isPressed("east")) {
                 this.velocity.x = +this.speed
             }
         }
