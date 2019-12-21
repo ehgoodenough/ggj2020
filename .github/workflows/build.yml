@@ -1,0 +1,32 @@
+name: Build & Deploy
+
+on:
+  push:	
+    branches:	
+      - master
+
+jobs:
+  build:
+    name: Build!
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v1
+    - name: Setup Node Environment
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.x"
+    - name: Install Dependencies
+      run: npm ci
+    - name: Build Artifact
+      run: npm run build
+    - name: Deploy Artifact
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        FOLDER: builds/web
+        TARGET_FOLDER: latest
+        BRANCH: gh-pages
+        CLEAN: true
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
