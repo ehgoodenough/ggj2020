@@ -10,8 +10,7 @@ const Poin = {
     "isPressed": function(button = "primary") {
         return (this.pressed[button] || this.pressed[BUTTON_NAMES[button]]) != undefined
     },
-    "wasJustPressed": function(delta) {
-        delta = delta || (1000 / 60)
+    "wasJustPressed": function(button = "primary", delta = 1000/60) {
         const pressed = this.pressed[button] || this.pressed[BUTTON_NAMES[button]]
         return window.performance.now() - pressed < delta
     },
@@ -39,3 +38,7 @@ document.addEventListener("touchup", (event) => Poin.setPressed(event.button || 
 document.addEventListener("touchmove", (event) => Poin.setPosition({"x": event.touches[0].clientX, "y": event.touches[0].clientY}))
 
 export default Poin
+
+document.addEventListener("contextmenu", (event) => {
+    event.preventDefault()
+})

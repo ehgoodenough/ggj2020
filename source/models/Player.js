@@ -1,4 +1,5 @@
 import input from "utility/input.js"
+import gamepad from "utility/gamepad.js"
 
 const FRAME_WIDTH = 16
 const FRAME_HEIGHT = 9
@@ -16,17 +17,12 @@ export default class Player {
     }
     update(delta) {
         if(this.mode == "play") {
-            if(input.isPressed("north")) {
-                this.velocity.y = -this.speed
-            }
-            if(input.isPressed("south")) {
-                this.velocity.y = +this.speed
-            }
-            if(input.isPressed("west")) {
-                this.velocity.x = -this.speed
-            }
-            if(input.isPressed("east")) {
-                this.velocity.x = +this.speed
+            const stick = input.getStick("move")
+            this.velocity.x = stick.x * this.speed
+            this.velocity.y = stick.y * this.speed
+
+            if(input.wasJustPressed("action", delta.ms)) {
+                console.log("!")
             }
         }
 
