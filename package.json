@@ -27,7 +27,7 @@
     "keyb": "^1.2.0",
     "local-storage-json": "^1.0.0",
     "lodash.clonedeep": "^4.5.0",
-    "microns": "^1.0.5",
+    "microns": "^1.0.6",
     "poin": "^1.0.4",
     "preact": "^10.1.1",
     "shortid": "^2.2.15",
@@ -35,10 +35,10 @@
     "yaafloop": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/plugin-transform-react-jsx": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "codeglue": "^1.8.0",
-    "electron": "^7.1.6",
+    "electron": "^7.1.7",
     "electron-builder": "^22.1.0",
     "gh-pages": "^2.1.1"
   },
