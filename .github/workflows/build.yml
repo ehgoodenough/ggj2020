@@ -24,9 +24,8 @@ jobs:
     - name: Deploy Artifact
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
+        CLEAN: true
+        BRANCH: gh-pages
         FOLDER: builds/web
         TARGET_FOLDER: latest
-        BRANCH: gh-pages
-        CLEAN: true
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
