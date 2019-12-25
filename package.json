@@ -24,11 +24,12 @@
     "npm": ">=5"
   },
   "dependencies": {
-    "keyb": "^1.2.0",
+    "joyp": "^0.1.0",
+    "keyb": "^1.2.1",
     "local-storage-json": "^1.0.0",
     "lodash.clonedeep": "^4.5.0",
     "microns": "^1.0.6",
-    "poin": "^1.0.4",
+    "poin": "^2.0.0",
     "preact": "^10.1.1",
     "shortid": "^2.2.15",
     "statgrab": "^1.2.1",

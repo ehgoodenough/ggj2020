@@ -1,5 +1,4 @@
 import input from "utility/input.js"
-import gamepad from "utility/gamepad.js"
 
 const FRAME_WIDTH = 16
 const FRAME_HEIGHT = 9

@@ -1,14 +1,14 @@
-import keyboard from "keyb"
-import pointer from "utility/pointer.js"
-import gamepad from "utility/gamepad.js"
 import geometry from "utility/geometry.js"
+import gamepad from "joyp"
+import keyboard from "keyb"
+import pointer from "poin"
 
 const DEADZONE_MAGNITUDE = 0.15
 const MAXIMUM_MAGNITUDE = 1
 
 const input = {
     "devices": {
-        "gamepad": {"index": 2},
+        "gamepad": {"index": 0},
     },
     "scheme": {
         "buttons": {
@@ -29,7 +29,6 @@ const input = {
                 {"source": "keyboard", "value": "<right>"},
             ],
             "action": [
-                {"source": "pointer", "value": "primary"},
                 {"source": "keyboard", "value": "<space>"},
                 {"source": "gamepad", "value": "east-button"},
             ]
